@@ -1,6 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
+  --font-primary: "Montserrat", sans-serif;
+
+  --color-bg-body: #343d4b;
+  --color-bg-content: #222831;
+  --color-text-primary: #fff;
+  --color-text-primary-inverted: #000;
+
+  --color-card-bg: #272e37;
+  --color-card-bg-hover: #3a434f;
+  --color-card-bg-active: #fff;
+
+  --gradient-button: linear-gradient(
+    91deg,
+    rgba(144, 217, 224, 0.9) 0.2%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  --gradient-button-inverted: linear-gradient(
+    256deg,
+    rgba(144, 217, 224, 0.9) 9.04%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+}
+
+body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
 }

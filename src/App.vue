@@ -1,8 +1,17 @@
 <script setup>
-const today = Date.now();
-const formattedDate = new Date(today).toLocaleDateString();
+import Button from "./components/Button/Button.vue";
 </script>
 
-<template>{{ formattedDate }}</template>
+<template>
+  <main class="main">
+    <Button> Button</Button>
+  </main>
+</template>
 
-<style scoped></style>
+<style scoped>
+.main {
+  padding: 60px 50px;
+  border-radius: 25px;
+  background-color: var(--color-bg-content);
+}
+</style>
