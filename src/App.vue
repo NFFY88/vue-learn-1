@@ -1,10 +1,22 @@
 <script setup>
-import Button from "./components/Button/Button.vue";
+import CitySelect from "./components/CitySelect/CitySelect.vue";
+import Stat from "./components/Stat/Stat.vue";
+
+const data = {
+  label: "Влажность",
+  value: "80%",
+};
+
+const selectCity = (payload) => {
+  globalThis.console.log(`selectCity: ${payload}`);
+};
 </script>
 
 <template>
   <main class="main">
-    <Button> Button</Button>
+    <Stat v-bind="data" />
+    <Stat label="Осадки" value="0%" />
+    <CitySelect @select-city="selectCity" />
   </main>
 </template>
 

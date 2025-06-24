@@ -2,9 +2,11 @@
 
 <template>
   <button class="button">
-    <slot name="icon-left"></slot>
-    <slot></slot>
-    <slot name="icon-right"></slot>
+    <slot name="iconLeft"></slot>
+    <span class="button-text">
+      <slot></slot>
+    </span>
+    <slot name="iconRight"></slot>
   </button>
 </template>
 
@@ -20,6 +22,9 @@
   font-weight: 600;
   cursor: pointer;
   font-family: var(--font-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .button:hover {
